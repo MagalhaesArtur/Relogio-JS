@@ -11,7 +11,7 @@
 <p align="center">
  <h1>Demo:</h1>
   <a href="https://lista-de-tarefas-reactjs.vercel.app/" target="_blank">
-    <img alt="Demo on Netlify" src="./gif/netlify.png">
+    <img alt="Demo on Netlify" src="./gif/netflify.png">
   </a>
 </p>
 
