@@ -1,0 +1,23 @@
+.container,
+.containerDark {
+  width: 300px;
+  height: 350px;
+}
+.borda {
+  width: 310px;
+  height: 360px;
+}
+.relogio,
+.relogioDark {
+  width: 200px;
+  height: 200px;
+}
+.relogio .number,
+.relogioDark .number {
+  font-size: 12px;
+}
+.check {
+  font-size: 12px;
+  width: 50px;
+  margin-bottom: 50px;
+}

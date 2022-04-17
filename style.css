@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: GigaSansBlack;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+@font-face {
+  font-family: GigaSansBlack;
+  src: url(./fonts/giga-sans-black.otf);
+}
+body {
+  --bg: circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%;
+  --bgDark: circle, #5d5d5e 0%, #232526 100%;
+  background: rgb(63, 94, 251);
+  background: radial-gradient(var(--bg));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
+.relogio {
+  --bgClock: rgba(31, 28, 28, 0.959);
+  --bgClockDark: rgba(216, 212, 212, 0.959);
+  --pointerColor: #eee;
+  --pointerColorDark: rgba(31, 28, 28, 0.959);
+  width: 400px;
+  height: 400px;
+  background-color: var(--bgClock);
+  border-radius: 50%;
+  border: 2px solid #ea2027;
+  box-shadow: 2px 2px 20px #000055;
+  position: relative;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
+.relogioDark {
+  --bgClock: rgba(31, 28, 28, 0.959);
+  --bgClockDark: rgba(216, 212, 212, 0.959);
+  --pointerColor: #eee;
+  --pointerColorDark: rgba(31, 28, 28, 0.959);
+  width: 400px;
+  height: 400px;
+  background-color: var(--bgClockDark);
+  border-radius: 50%;
+  border: 2px solid #ea2027;
+  box-shadow: 2px 2px 20px #000055;
+  position: relative;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
+.relogio .number,
+.relogioDark .number {
+  --numberColor: #eee;
+  --numberColorDark: rgb(34, 34, 34);
+  --rotation: 0;
+  padding: 10px;
+  color: var(--numberColor);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+  font-size: 24px;
+}
+.relogio .number.number-1,
+.relogioDark .number.number-1 {
+  --rotation: 30deg;
+}
+.relogio .number.number-2,
+.relogioDark .number.number-2 {
+  --rotation: 60deg;
+}
+.relogio .number-3,
+.relogioDark .number-3 {
+  --rotation: 90deg;
+}
+.relogio .number.number-4,
+.relogioDark .number.number-4 {
+  --rotation: 120deg;
+}
+.relogio .number.number-5,
+.relogioDark .number.number-5 {
+  --rotation: 150deg;
+}
+.relogio .number.number-6,
+.relogioDark .number.number-6 {
+  --rotation: 180deg;
+}
+.relogio .number.number-7,
+.relogioDark .number.number-7 {
+  --rotation: 210deg;
+}
+.relogio .number.number-8,
+.relogioDark .number.number-8 {
+  --rotation: 240deg;
+}
+.relogio .number.number-9,
+.relogioDark .number.number-9 {
+  --rotation: 270deg;
+}
+.relogio .number.number-10,
+.relogioDark .number.number-10 {
+  --rotation: 300deg;
+}
+.relogio .number.number-11,
+.relogioDark .number.number-11 {
+  --rotation: 330deg;
+}
+/* Ponteiros */
+.relogio .ponteiro,
+.relogioDark .ponteiro {
+  --rotation: 0;
+
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  z-index: 2;
+  transform-origin: bottom;
+
+  border-radius: 10px;
+
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+.relogio .ponteiro.segundos,
+.relogioDark .ponteiro.segundos {
+  width: 3px;
+  height: 40%;
+  background-color: red;
+}
+.relogio .ponteiro.minutos,
+.relogioDark .ponteiro.minutos {
+  width: 7px;
+  height: 35%;
+  background-color: var(--pointerColor);
+}
+.relogio .ponteiro.horas,
+.relogioDark .ponteiro.horas {
+  width: 10px;
+  height: 25%;
+  background-color: var(--pointerColor);
+}
+.relogio .bolinha,
+.relogioDark .bolinha {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: var(--pointerColor);
+  margin-left: -6.5px;
+  z-index: 3;
+  margin-bottom: -6.5px;
+}
+/* Main Div */
+.container {
+  --bgContainer: rgb(226, 219, 219);
+  --bgContainerDark: #222;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px 90px 25px 90px;
+  background-color: var(--bgContainer);
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
+.containerDark {
+  --bgContainer: rgb(226, 219, 219);
+  --bgContainerDark: #222;
+  width: 600px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px 90px 25px 90px;
+  background-color: var(--bgContainerDark);
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
+.borda {
+  width: 610px;
+  height: 508px;
+  border-radius: 26px 91px 26px 91px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 300% 300%;
+  animation: colors 4s ease infinite;
+}
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/* Checkbox */
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  margin-left: 450px;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: grey;
+  float: right;
+  color: #ea2027;
+  border-radius: 100px;
+  position: relative;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background-color: #0077ff;
+}
+
+input:checked + label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 45px;
+}
+.check {
+  display: flex;
+  flex-direction: column;
+}
+.default {
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
+.defaultDark {
+  color: #eee;
+  transition-property: all;
+  transition-timing-function: ease;
+  transition-delay: 50ms;
+  transition-duration: 300ms;
+}
