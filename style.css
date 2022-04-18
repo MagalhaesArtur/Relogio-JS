@@ -30,7 +30,7 @@ body {
   --bgClock: rgba(31, 28, 28, 0.959);
   --bgClockDark: rgba(216, 212, 212, 0.959);
   --pointerColor: #eee;
-  --pointerColorDark: rgba(31, 28, 28, 0.959);
+
   width: 400px;
   height: 400px;
   background-color: var(--bgClock);
@@ -46,8 +46,8 @@ body {
 .relogioDark {
   --bgClock: rgba(31, 28, 28, 0.959);
   --bgClockDark: rgba(216, 212, 212, 0.959);
-  --pointerColor: #eee;
-  --pointerColorDark: rgba(31, 28, 28, 0.959);
+  --pointerColor: rgba(31, 28, 28, 0.959);
+
   width: 400px;
   height: 400px;
   background-color: var(--bgClockDark);

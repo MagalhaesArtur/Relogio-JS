@@ -26,6 +26,8 @@ const relogio = document.querySelector(".relogio");
 const mainContainer = document.querySelector(".container");
 const divNumber = document.querySelectorAll(".div.number");
 const title = document.querySelector(".default");
+const pontMin = document.querySelector(".ponteiro.minutos");
+const pontHor = document.querySelector(".ponteiro.horas");
 
 checkbox.addEventListener("change", ({ target }) => {
   if (target.checked) {
@@ -37,6 +39,8 @@ checkbox.addEventListener("change", ({ target }) => {
 
     mainContainer.classList.remove("container");
     mainContainer.classList.add("containerDark");
+
+    relogio.style.setProperty("--pointerColor", "rgba(31, 28, 28, 0.959)");
 
     for (c of divNumber) {
       c.style.setProperty("--numberColor", "rgb(34, 34, 34)");
